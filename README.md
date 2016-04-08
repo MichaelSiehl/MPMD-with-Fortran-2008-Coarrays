@@ -1,4 +1,4 @@
-# MPMD with Coarray Fortran I
+# MPMD with Coarray Fortran
 
 test
 
