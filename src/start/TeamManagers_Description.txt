@@ -4,7 +4,7 @@ Description of the TeamManagers.txt file
 - The first row contains just the number of team managers.
 
 - Each team manager requires one row containing:
-(1) the image number where the image manager will be executed
+(1) the image number where the team manager will be executed
 (2) a string containing the file name of the TeamMembers file name
 
 example:
