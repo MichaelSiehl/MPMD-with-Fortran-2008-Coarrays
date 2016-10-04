@@ -1,6 +1,6 @@
 # MPMD with Fortran 2008 Coarrays Repository
 
-# IMPORTANT UPDATE (16/10/04)
+# Important Update (16/10/04)
 Please be aware that the original source code in the 'src' folder is not conforming with the Fortran (2008/2015) standard since it does not use any Fortran (2008) means for the synchronizations (between coarray images) in the MPMD-style part of the source codes.
 I just added a new source code folder 'src_atomic_version', containing a very similar example program which does utilize Fortran 2008 SYNC MEMORY and atomic subroutines. Within that new version of the example program the SYNC MEMORY statements do form unordered execution segments (see Modern Fortran explained, 2011, Appendix B.10.1 for a brief description). To compile that code you may need a more recent Fortran compiler since the code uses scalar integer components of derived type coarrays together with atomic subroutines (atomic_define, atomic_ref) (ifort 15 did not allow this, while ifort 17 as well as gfortran7/OpenCoarrays do allow it).
 Compared to the original src version, the source code of the new src_atomic_version contains only very few changes which are marked with '160829' and '160901' comments (time stamps).
